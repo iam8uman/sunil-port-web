@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Dot, DownloadCloudIcon, PhoneCallIcon } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -13,29 +14,30 @@ const Hero = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
               >
-                <h1 className="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl xl:text-6xl sm:tracking-tight">
-                  Copy, Paste & Ship Website in Minutes.
+                <h1 className="text-4xl font-semibold tracking-tight text-gray-900 dark:text-slate-300 sm:text-5xl xl:text-6xl sm:tracking-tight">
+                  Enterpreneur
+                  <span className="text-primary font-extrabold inline-block">
+                    .
+                  </span>
                 </h1>
                 <motion.p
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1, delay: 0.5 }}
-                  className="mt-6 text-lg leading-7 text-gray-700 lg:leading-8 lg:text-xl"
+                  className="mt-6 text-lg leading-7 text-gray-500 lg:leading-8 lg:text-xl"
                 >
-                  Clarity gives you the blocks & components you need to create a
-                  truly professional website, landing page or admin panel for
-                  SaaS.
+                  I&apos;m a multifaceted <span className="font-bold text-primary">BBA-BI</span> student, I create YouTube content, invest & run my own business. My skills in digital marketing and web development help me excel in the digital world.
                 </motion.p>
-                <div className="mt-8">
+                <div className="mt-8 flex justify-start">
                   <motion.a
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     href="#"
                     title=""
-                    className="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700"
+                    className="inline-flex items-center gap-2 justify-center px-8 text-lg font-medium transition-all duration-200 border border- rounded-full outline-primary hover:bg-white  hover:text-white text-gray-950  bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-2"
                     role="button"
                   >
-                    Build your first website in Webflow
+                    <DownloadCloudIcon className="" /> Download CV
                   </motion.a>
                 </div>
 
@@ -69,7 +71,7 @@ const Hero = () => {
                     >
                       <path d="M5 13l4 4L19 7" />
                     </svg>
-                    Build website in less than 5 minutes.
+                    Contact support 24/7.
                   </li>
 
                   <li className="flex items-center">
