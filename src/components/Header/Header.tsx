@@ -4,12 +4,13 @@ import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
 import { MenuSquareIcon, X } from "lucide-react";
 import Link from "next/link";
+import SwitchDark from "@/components/SwitchDark";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-white shadow-sm drop-shadow-md sticky top-0 z-10">
+    <header className="bg-slate-200 text-black sticky top-0 z-10 dark:bg-gray-950 dark:text-gray-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex justify-between items-center">
           <div className="flex-shrink-0">
@@ -35,7 +36,7 @@ const Header = () => {
               )}
             </button>
           </div>
-          <nav className="hidden md:flex space-x-4">
+          <nav className="hidden md:flex space-x-4 items-center">
             {links.map((link) => (
               <a
                 key={link.text}
@@ -45,6 +46,7 @@ const Header = () => {
                 {link.text}
               </a>
             ))}
+            <SwitchDark />
           </nav>
         </div>
       </div>

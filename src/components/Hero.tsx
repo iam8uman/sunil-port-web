@@ -1,30 +1,42 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
     <>
       <div>
-        <section className="py-12 overflow-hidden bg-white sm:py-16 lg:pb-20 xl:pb-48">
+        <section className="py-12 overflow-hidden bg-gray-200 sm:py-16 lg:pb-20 xl:pb-48 dark:bg-gray-950">
           <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
             <div className="grid items-center grid-cols-1 lg:grid-cols-2 gap-y-12 gap-x-16">
-              <div>
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
+              >
                 <h1 className="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl xl:text-6xl sm:tracking-tight">
                   Copy, Paste & Ship Website in Minutes.
                 </h1>
-                <p className="mt-6 text-lg leading-7 text-gray-700 lg:leading-8 lg:text-xl">
+                <motion.p
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1, delay: 0.5 }}
+                  className="mt-6 text-lg leading-7 text-gray-700 lg:leading-8 lg:text-xl"
+                >
                   Clarity gives you the blocks & components you need to create a
                   truly professional website, landing page or admin panel for
                   SaaS.
-                </p>
+                </motion.p>
                 <div className="mt-8">
-                  <a
+                  <motion.a
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
                     href="#"
                     title=""
                     className="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700"
                     role="button"
                   >
                     Build your first website in Webflow
-                  </a>
+                  </motion.a>
                 </div>
 
                 <ul className="mt-10 space-y-4">
@@ -35,13 +47,11 @@ const Hero = () => {
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
-                      stroke-width="2"
+                      strokeWidth={2}
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M5 13l4 4L19 7"
-                      />
+                      <path d="M5 13l4 4L19 7" />
                     </svg>
                     Get unlimited design blocks.
                   </li>
@@ -53,13 +63,11 @@ const Hero = () => {
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
-                      stroke-width="2"
+                      strokeWidth={2}
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M5 13l4 4L19 7"
-                      />
+                      <path d="M5 13l4 4L19 7" />
                     </svg>
                     Build website in less than 5 minutes.
                   </li>
@@ -71,24 +79,28 @@ const Hero = () => {
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
-                      stroke-width="2"
+                      strokeWidth={2}
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M5 13l4 4L19 7"
-                      />
+                      <path d="M5 13l4 4L19 7" />
                     </svg>
                     Made for Webflow developers.
                   </li>
                 </ul>
-              </div>
+              </motion.div>
 
-              <div>
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1 }}
+              >
                 <div className="relative w-full max-w-sm mx-auto">
                   <div className="absolute inset-y-0 w-screen translate-y-20 left-1/2 bg-blue-50 lg:left-32 lg:right-0"></div>
 
-                  <img
+                  <motion.img
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
                     className="relative object-cover w-full max-w-xs mx-auto sm:max-w-sm rounded-2xl"
                     src="https://landingfoliocom.imgix.net/store/collection/saasui/images/hero/3/portrait-male.png"
                     alt=""
@@ -121,7 +133,7 @@ const Hero = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </section>
